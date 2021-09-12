@@ -27,4 +27,4 @@ An easy way to generate a random password, according to your specifications
 ## Development
 
 Kellie Redondo, Full Stack Developer<br>
-&ensp;&ensp;aka RU3YKat (ru3ykat.github.io)
+&ensp;&ensp;aka RU3YKat <a href="https://github.com/RU3YKat">on Github</a>
