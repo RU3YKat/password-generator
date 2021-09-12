@@ -8,38 +8,44 @@ var numeric = ['0','1','2','3','4','5','6','7','8','9'];
 
 var userSelect = [];
 var passLength = "";
+var password = "";
 
 function generatePassword () {
-    // prompt user for password length and parses string into integer
-    passLength =  parseInt(prompt("Let's generate a secure password! How many characters would you like?  Please provide a length, between 8 - 128 characters."));
-    // test for appropriate response
-    if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
-      alert("Oops! Please enter a number between 8 and 128.");
-      generatePassword();
-    };
   
-    // confirm user select for uppercase letters 
-    if (confirm("Would you like to include uppercase letters?")) {
-      // append uppercase letters to 
-      userSelect = userSelect.concat(upperCase);
-    };
+  // clear prior password to allow for new
+  password = "";
 
-    // confirm user select for lowercaser letters
-    if (confirm("How about lowercase letters?")) {
-      userSelect = userSelect.concat(lowerCase);
-    };
+  // clear userSelect array for new choices
+  userSelect = [];
 
-    // confirm user select for special characters
-    if (confirm("Maybe some special characters to add complexity?")) {
-      userSelect = userSelect.concat(special);
-    };
+  // prompt user for password length and parses string into integer
+  passLength =  parseInt(prompt("Let's generate a secure password!\nHow many characters would you like?\nPlease provide a length, between 8 - 128 characters."));
+  // test for appropriate response
+  if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
+    alert("Oops! Please enter a number between 8 and 128.");
+    generatePassword();
+  };
 
-    // confirm user select for numbers
-    if (confirm("Finally, would you like to complete your password with numbers?")) {
-      userSelect = userSelect.concat(numeric);
-    };
-  
-    
+  // confirm user select for uppercase letters 
+  if (confirm("Would you like to include uppercase letters?")) {
+    // append uppercase letters to 
+    userSelect = userSelect.concat(upperCase);
+  };
+
+  // confirm user select for lowercaser letters
+  if (confirm("How about lowercase letters?")) {
+    userSelect = userSelect.concat(lowerCase);
+  };
+
+  // confirm user select for special characters
+  if (confirm("Maybe some special characters to add complexity?")) {
+    userSelect = userSelect.concat(special);
+  };
+
+  // confirm user select for numbers
+  if (confirm("Finally, would you like to complete your password with numbers?")) {
+    userSelect = userSelect.concat(numeric);
+  };
 
   // loop for selected random variables in concatinated userSelect array
   for (i = 0; i < passLength; i++) {
@@ -47,7 +53,8 @@ function generatePassword () {
       userSelect[Math.floor(Math.random() * userSelect.length)];
   };
 
-return password;
+  return password;
+
 };
 
 // Write password to the #password input
@@ -60,4 +67,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
