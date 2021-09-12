@@ -12,7 +12,7 @@
 
 ---
 
-## ![index.html full-page](https://github.com/RU3YKat/password-generator/blob/main/assets/images/screencapture-ru3ykat-github-io-password-generator-2021-09-12-12_07_42.png)
+## ![index.html full-page](https://github.com/RU3YKat/password-generator/blob/main/assets/images/screencapture-password-generator-091221.png)
 
 ---
 
