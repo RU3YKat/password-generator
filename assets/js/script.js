@@ -47,6 +47,12 @@ function generatePassword () {
     userSelect = userSelect.concat(numeric);
   };
 
+  // validate userSelect array 
+  if (userSelect.length === 0) {
+    alert("Please try again and select at least one character type.\nThe best passwords have multiple types!");
+    generatePassword();
+  };
+
   // loop for selected random variables in concatinated userSelect array
   for (i = 0; i < passLength; i++) {
     password +=
