@@ -52,6 +52,8 @@ function generatePassword () {
     alert("Please try again and select at least one character type.\nThe best passwords have multiple types!");
     generatePassword();
   };
+  
+  console.log(userSelect);
 
   // loop for selected random variables in concatinated userSelect array
   for (i = 0; i < passLength; i++) {
